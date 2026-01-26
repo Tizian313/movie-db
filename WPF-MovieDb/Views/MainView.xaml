@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="WPF_MovieDb.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_MovieDb.Views"
+             xmlns:viewModels="clr-namespace:WPF_MovieDb.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="1600"
+             d:DesignHeight="900">
+    
+    <Grid>
+        <!-- UI Elements -->
+        
+        <Label Style="{StaticResource TitelLabelShadow}" Content="Movie Manager" VerticalAlignment="Center" Height="200" Grid.ColumnSpan="2">
+            <Label.RenderTransform>
+                <ScaleTransform CenterX="611" ScaleX="1.0" x:Name="SpinShadow"/>
+            </Label.RenderTransform>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="SpinShadow"
+                                 From="1" To="-1" Duration="0:0:4"  
+                                 AutoReverse="True" RepeatBehavior="Forever"
+                                 Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
+                                 AccelerationRatio="0.3" DecelerationRatio="0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Label Style="{StaticResource TitelLabel}" Content="Movie Manager" VerticalAlignment="Center" Height="200" Grid.ColumnSpan="2">
+            <Label.RenderTransform>
+                <ScaleTransform CenterX="611" ScaleX="1.0" x:Name="Spin"/>
+            </Label.RenderTransform>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Spin"
+                                 From="1" To="-1" Duration="0:0:4"  
+                                 AutoReverse="True" RepeatBehavior="Forever"
+                                 Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
+                                 AccelerationRatio="0.3" DecelerationRatio="0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        
+        <Label Style="{StaticResource InfoLabel}" Content="Username:" Grid.Row="1" VerticalAlignment="Bottom"/>
+        <TextBox Text="{Binding Username}" Height="60" Grid.Row="2" FontSize="40" VerticalAlignment="Top" Margin="100, 0"/>
+
+        <Label Style="{StaticResource InfoLabel}" Content="Password:" Grid.Row="3" VerticalAlignment="Bottom"/>
+        <PasswordBox PasswordChanged="PasswordChanged" Height="60" Grid.Row="4" FontSize="40" VerticalAlignment="Top" Margin="100, 0"/>
+
+        <Button Content="{Binding DefaultButtonText}" Grid.Row="5" Style="{StaticResource MenuButton}" Command="{Binding Enter}" IsDefault="True"/>
+
+        <Canvas Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" Height="90" Width="450">
+            <Label Style="{StaticResource InfoLabel}" Content="New user" Margin="120, 5"/>
+            <CheckBox IsChecked="{Binding IsNewUser}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="6" ScaleY="6" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+        </Canvas>
+
+        <Label Style="{StaticResource InfoLabel}" Content="Repeat password:" Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" IsEnabled="{Binding IsNewUser}"/>
+        <PasswordBox PasswordChanged="RepeatedPasswordChanged" Height="60" Grid.Row="4" Grid.Column="1" FontSize="40" VerticalAlignment="Top" Margin="100, 0" IsEnabled="{Binding IsNewUser}"/>
+
+        <Button Content=" Exit " Grid.Row="5" Grid.Column="1" Style="{StaticResource MenuButton}" Command="{Binding Exit}" IsCancel="True"/>
+
+        <Label Style="{StaticResource InfoLabel}" Content="{Binding ErrorText}" FontSize="30" VerticalAlignment="Top" Grid.Row="6" Grid.ColumnSpan="2" Foreground="#E32F2F"/>
+
+        <Image Grid.Row="9" Grid.Column="9" Style="{StaticResource CornerLogo}"/>
+
+        <Control Style="{StaticResource LoadingIndicator}" Visibility="{Binding IsLoading}" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
+        <!-- UI Elements -->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</UserControl>

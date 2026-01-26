@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>WPF_MovieDb</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="artisoLogo.png" />
+    <None Remove="Resources\bin.png" />
+    <None Remove="Resources\deselectedBoxes.png" />
+    <None Remove="Resources\diskette.png" />
+    <None Remove="Resources\editing.png" />
+    <None Remove="Resources\emptyStars.png" />
+    <None Remove="Resources\filledStars.png" />
+    <None Remove="Resources\Icon.ico" />
+    <None Remove="Resources\return.png" />
+    <None Remove="Resources\selectedBoxes.png" />
+    <None Remove="Resources\star.png" />
+    <None Remove="Resources\swap.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.1.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MovieDB.REST-API\MovieDB.REST-API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\artisoLogo.png" />
+    <Resource Include="Resources\bin.png" />
+    <Resource Include="Resources\diskette.png" />
+    <Resource Include="Resources\editing.png" />
+    <Resource Include="Resources\emptyStars.png" />
+    <Resource Include="Resources\filledStars.png" />
+	<Resource Include="Resources\Icon.ico" />
+    <Resource Include="Resources\return.png" />
+    <Resource Include="Resources\selectedBoxes.png" />
+    <Resource Include="Resources\star.png" />
+    <Resource Include="Resources\swap.png" />
+    <Resource Include="Resources\deselectedBoxes.png" />
+  </ItemGroup>
+
+</Project>

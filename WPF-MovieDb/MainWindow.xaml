@@ -1,0 +1,53 @@
+﻿    <Window x:Class="WPF_MovieDb.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_MovieDb"
+        xmlns:views="clr-namespace:WPF_MovieDb.Views"
+        xmlns:vm="clr-namespace:WPF_MovieDb.ViewModels"
+        Title="Movie Database" 
+        Height="900"
+        Width="1600"
+        Icon="/Resources/Icon.ico">
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type vm:MainViewModel}">
+            <views:MainView/>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type vm:MenuViewModel}">
+            <views:MenuView/>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type vm:ShowMovieDetailedViewModel}">
+            <views:ShowMovieDetailedView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:MovieEditorViewModel}">
+            <views:MovieEditorView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:AddPersonViewModel}">
+            <views:AddPersonView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:MovieSearchViewModel}">
+            <views:MovieSearchView/>
+        </DataTemplate>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF2D2D2D" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <ContentControl Content="{Binding CurrentPageViewModel}"/>
+    </Grid>
+
+</Window>

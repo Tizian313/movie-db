@@ -1,0 +1,81 @@
+[
+  {
+    "Name": "The Shawshank Redemption",
+    "Genres": [
+      8
+    ],
+    "Director_IDs": [
+      0
+    ],
+    "Star_IDs": [
+      1,
+      2
+    ],
+    "Rating": 9.3
+  },
+  {
+    "Name": "The Godfather",
+    "Genres": [
+      8
+    ],
+    "Director_IDs": [
+      0
+    ],
+    "Star_IDs": [
+      2,
+      3
+    ],
+    "Rating": 6.9
+  },
+  {
+    "Name": "The Godfather Part II",
+    "Genres": [
+      8
+    ],
+    "Director_IDs": [
+      1
+    ],
+    "Star_IDs": [
+      3,
+      0
+    ],
+    "Rating": 6.9
+  },
+  {
+    "Name": "The Dark Knight",
+    "Genres": [
+      8
+    ],
+    "Director_IDs": [
+      3
+    ],
+    "Star_IDs": [
+      2,
+      1
+    ],
+    "Rating": 6.9
+  },
+  {
+    "Name": "12 Angry Men",
+    "Genres": [
+      8
+    ],
+    "Director_IDs": [ 0 ],
+    "Star_IDs": [
+      2,
+      4
+    ],
+    "Rating": 6.9
+  },
+  {
+    "Name": "Fight Club",
+    "Genres": [
+      7
+    ],
+    "Director_IDs": [ 0 ],
+    "Star_IDs": [
+      1
+    ],
+    "Rating": 8.8
+  }
+]

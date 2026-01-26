@@ -1,0 +1,162 @@
+﻿<Application x:Class="WPF_MovieDb.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_MovieDb">
+
+
+    <Application.Resources>
+
+        <!--Make control bigger if mouse hovers over it-->
+        <Style x:Key="HoverScaleTransform">
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.RenderTransformOrigin" Value="0.5, 0.5"/>
+                    <Setter Property="Control.RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Make control bigger if mouse hovers over it-->
+
+        <!-- Menu Button -->
+        <Style x:Key="MenuButton" TargetType="Button" BasedOn="{StaticResource HoverScaleTransform}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="Auto"/>
+
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <!-- Menu Button -->
+
+        <!-- Icon button -->
+        <Style x:Key="IconButton" TargetType="Button" BasedOn="{StaticResource HoverScaleTransform}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <!-- Icon button -->
+
+
+        <!--Canvas Button-->
+        <Style x:Key="CanvasButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="1186"/>
+            <Setter Property="Canvas.Right" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <!--Canvas Button-->
+
+        <!-- Title Label -->
+        <Style x:Key="TitelLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Foreground" Value="#DDDDDD"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="133"/>
+            <Setter Property="FontSize" Value="130"/>
+            <Setter Property="FontFamily" Value="Rockwell Extra Bold"/>
+            <Setter Property="FontSize" Value="130"/>
+        </Style>
+
+        <Style x:Key="TitelLabelShadow" TargetType="Label" BasedOn="{StaticResource TitelLabel}">
+            <Setter Property="Margin" Value="10,20,0,0"/>
+            <Setter Property="Foreground" Value="#474747"/>
+        </Style>
+        <!-- Title Label -->
+
+        <!-- Info Label -->
+        <Style x:Key="InfoLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#DDDDDD"/>
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="Auto"/>
+        </Style>
+        <!-- Info Label -->
+
+        <!-- Artiso logo -->
+        <Style x:Key="CornerLogo" TargetType="Image">
+            <Setter Property="Source" Value="/Resources/artisoLogo.png"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="474.808510638298"/>
+            <Setter Property="Margin" Value="0,0,10,10"/>
+        </Style>
+        <!-- Artiso logo -->
+
+        <!--Style of movie buttons in MovieSearchView-->
+        <Style x:Key="MovieButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Style of movie buttons in MovieSearchView-->
+        
+        <!--Loading indicator-->
+        <Style x:Key="LoadingIndicator" TargetType="Control">
+            <Setter Property="Background" Value="#8F000000"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Control">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Label Style="{StaticResource TitelLabel}" Height="200" Content="Loading..." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--Loading indicator-->
+
+    </Application.Resources>
+
+</Application>
+    
+    

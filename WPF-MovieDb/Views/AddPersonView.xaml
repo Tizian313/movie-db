@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="WPF_MovieDb.Views.AddPersonView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_MovieDb.Views"
+
+             xmlns:viewModel="clr-namespace:WPF_MovieDb.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="1600"
+             d:DesignHeight="900">
+
+    <Grid>
+        <!-- Here to act as event trigger -->
+        <Label Content="{Binding OnChangedToView}" Visibility="Hidden"/>
+        <!-- Here to act as event trigger -->
+
+        <!-- UI Elements -->
+        <Label Content="Add person" Style="{StaticResource TitelLabel}" Height="170" Grid.ColumnSpan="2"/>
+
+        <Label Content="First name: " Style="{StaticResource InfoLabel}" HorizontalAlignment="Right"    Grid.Row="1"/>
+        <TextBox Text="{Binding FirstNameInput, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" FontSize="48" Margin="10" Height="80" Grid.Row="1"/>
+
+        <Label Content="Last name: " Style="{StaticResource InfoLabel}" HorizontalAlignment="Right"     Grid.Row="2"/>
+        <TextBox Text="{Binding LastNameInput, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" FontSize="48" Margin="10" Height="80" Grid.Row="2"/>
+
+        <Label Content="Date of birth: " Style="{StaticResource InfoLabel}" HorizontalAlignment="Right" Grid.Row="3"/>
+        <TextBox Text="{Binding DateInput, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" FontSize="48" Margin="10" Height="80" Grid.Row="3"/>
+
+        
+        <Button Style="{StaticResource IconButton}" Grid.Row="4" Command="{Binding Cancel}"  Margin="10" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsCancel="True" ToolTip="Cancel">
+            <StackPanel>
+                <Image Source="../Resources/return.png"/>
+            </StackPanel>
+        </Button>
+
+        <Button Style="{StaticResource IconButton}" Grid.Row="9" Command="{Binding Confirm}" Margin="120, 10" HorizontalAlignment="Left" VerticalAlignment="Bottom" IsDefault="True" ToolTip="Save">
+            <StackPanel>
+                <Image Source="../Resources/diskette.png"/>
+            </StackPanel>
+        </Button>
+
+        <Image Style="{StaticResource CornerLogo}" Grid.Row="9" Grid.Column="1"/>
+        <!-- UI Elements -->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="120" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="440"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+
+</UserControl>
+
+    

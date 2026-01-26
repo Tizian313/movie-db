@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YourMovieDB", "YourMovieDB\YourMovieDB.csproj", "{66E19303-8436-4AE3-B9CC-79C39F650C68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{9BFA7977-64D7-43B5-A54E-FD924118493A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF-MovieDb", "WPF-MovieDb\WPF-MovieDb.csproj", "{B0086CE0-305F-441B-9A86-2A6C1B145059}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF-MovieDb.Test", "WPF-MovieDb.Test\WPF-MovieDb.Test.csproj", "{973248AD-1D56-491E-9523-B94CDC9259DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDB.REST-API", "MovieDB.REST-API\MovieDB.REST-API.csproj", "{1FF26566-FA23-42BA-AFBA-01276388C175}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieDB.SharedModels", "MovieDB.SharedModels\MovieDB.SharedModels.csproj", "{BACB3E22-F6F7-4BBD-92A3-F90ACB908A4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDB.REST-API.Test", "MovieDB.REST-API.Test\MovieDB.REST-API.Test.csproj", "{5687ACCF-E74B-4220-AF6D-677CC2F8E0AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66E19303-8436-4AE3-B9CC-79C39F650C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E19303-8436-4AE3-B9CC-79C39F650C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E19303-8436-4AE3-B9CC-79C39F650C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E19303-8436-4AE3-B9CC-79C39F650C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFA7977-64D7-43B5-A54E-FD924118493A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFA7977-64D7-43B5-A54E-FD924118493A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFA7977-64D7-43B5-A54E-FD924118493A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFA7977-64D7-43B5-A54E-FD924118493A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0086CE0-305F-441B-9A86-2A6C1B145059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0086CE0-305F-441B-9A86-2A6C1B145059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0086CE0-305F-441B-9A86-2A6C1B145059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0086CE0-305F-441B-9A86-2A6C1B145059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973248AD-1D56-491E-9523-B94CDC9259DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973248AD-1D56-491E-9523-B94CDC9259DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973248AD-1D56-491E-9523-B94CDC9259DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973248AD-1D56-491E-9523-B94CDC9259DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF26566-FA23-42BA-AFBA-01276388C175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF26566-FA23-42BA-AFBA-01276388C175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF26566-FA23-42BA-AFBA-01276388C175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF26566-FA23-42BA-AFBA-01276388C175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACB3E22-F6F7-4BBD-92A3-F90ACB908A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACB3E22-F6F7-4BBD-92A3-F90ACB908A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACB3E22-F6F7-4BBD-92A3-F90ACB908A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACB3E22-F6F7-4BBD-92A3-F90ACB908A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5687ACCF-E74B-4220-AF6D-677CC2F8E0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5687ACCF-E74B-4220-AF6D-677CC2F8E0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5687ACCF-E74B-4220-AF6D-677CC2F8E0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5687ACCF-E74B-4220-AF6D-677CC2F8E0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64B2D722-C753-4633-825A-014E258E5289}
+	EndGlobalSection
+EndGlobal

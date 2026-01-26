@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="WPF_MovieDb.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_MovieDb.Views"
+             xmlns:viewModels="clr-namespace:WPF_MovieDb.ViewModels"
+             mc:Ignorable="d"
+             d:DesignWidth="1600"
+             d:DesignHeight="900">
+
+    <Grid>
+        <!-- UI Elements -->
+
+        <Label Style="{StaticResource TitelLabelShadow}" Content="Movie Manager" VerticalAlignment="Center" Height="200" >
+            <Label.RenderTransform>
+                <ScaleTransform CenterX="611" ScaleX="1.0" x:Name="SpinShadow"/>
+            </Label.RenderTransform>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="SpinShadow"
+                                 From="1" To="-1" Duration="0:0:4"  
+                                 AutoReverse="True" RepeatBehavior="Forever"
+                                 Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
+                                 AccelerationRatio="0.3" DecelerationRatio="0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Label Style="{StaticResource TitelLabel}" Content="Movie Manager" VerticalAlignment="Center" Height="200">
+            <Label.RenderTransform>
+                <ScaleTransform CenterX="611" ScaleX="1.0" x:Name="Spin"/>
+            </Label.RenderTransform>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Spin"
+                                 From="1" To="-1" Duration="0:0:4"  
+                                 AutoReverse="True" RepeatBehavior="Forever"
+                                 Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
+                                 AccelerationRatio="0.3" DecelerationRatio="0.3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Button Content=" Search movies " Grid.Row="1" Style="{StaticResource MenuButton}" Command="{Binding ToSearchMoviesCommand}"/>
+
+        <Button Content=" Add movie " Grid.Row="2" Style="{StaticResource MenuButton}" Command="{Binding ToAddMovieCommand}"/>
+
+        <Button Content=" Logout " Grid.Row="3" Style="{StaticResource MenuButton}" Command="{Binding Logout}" IsCancel="True"/>
+
+        <Image Grid.Row="4" Style="{StaticResource CornerLogo}"/>
+        <!-- UI Elements -->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+    </Grid>
+</UserControl>
