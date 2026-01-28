@@ -80,7 +80,6 @@
                 <Image Source="../Resources/diskette.png"/>
             </StackPanel>
         </Button>
-        <Image Style="{StaticResource CornerLogo}" Grid.Row="9" Grid.Column="9"/>
         <!-- UI Elements -->
 
         <Grid.RowDefinitions>

@@ -116,7 +116,6 @@
         <!-- Scrollable movie display -->
 
         <!-- Bottom UI -->
-        <Image Grid.Row="9" Style="{StaticResource CornerLogo}" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Center" Grid.Column="9" />
 
         <Button CommandParameter="Return" Grid.Row="9" Command="{Binding Return}" IsCancel="True" Style="{StaticResource IconButton}" HorizontalAlignment="Left" Margin="10,10,0,10" ToolTip="Return">
             <StackPanel>

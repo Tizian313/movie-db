@@ -105,16 +105,6 @@
         </Style>
         <!-- Info Label -->
 
-        <!-- Artiso logo -->
-        <Style x:Key="CornerLogo" TargetType="Image">
-            <Setter Property="Stretch" Value="Fill"/>
-            <Setter Property="HorizontalAlignment" Value="Right"/>
-            <Setter Property="VerticalAlignment" Value="Bottom"/>
-            <Setter Property="Height" Value="100"/>
-            <Setter Property="Width" Value="474.808510638298"/>
-            <Setter Property="Margin" Value="0,0,10,10"/>
-        </Style>
-        <!-- Artiso logo -->
 
         <!--Style of movie buttons in MovieSearchView-->
         <Style x:Key="MovieButton" TargetType="Button">

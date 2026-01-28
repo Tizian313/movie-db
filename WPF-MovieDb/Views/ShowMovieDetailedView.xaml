@@ -81,7 +81,6 @@
             </StackPanel>
         </Button>
         
-        <Image                     Grid.Row="9" Grid.Column="9" Style="{StaticResource CornerLogo}"/>
         <!-- UI Elements -->
 
         <Grid.ColumnDefinitions>

@@ -56,7 +56,6 @@
 
         <Button Content=" Logout " Grid.Row="3" Style="{StaticResource MenuButton}" Command="{Binding Logout}" IsCancel="True"/>
 
-        <Image Grid.Row="4" Style="{StaticResource CornerLogo}"/>
         <!-- UI Elements -->
 
         <Grid.RowDefinitions>
