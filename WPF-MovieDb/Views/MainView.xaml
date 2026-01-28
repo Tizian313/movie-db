@@ -57,11 +57,11 @@
         <Label Style="{StaticResource InfoLabel}" Content="Password:" Grid.Row="3" VerticalAlignment="Bottom"/>
         <PasswordBox PasswordChanged="PasswordChanged" Height="60" Grid.Row="4" FontSize="40" VerticalAlignment="Top" Margin="100, 0"/>
 
-        <Button Content=" Register " Grid.Row="5" Style="{StaticResource MenuButton}" Command="{Binding Enter}" IsDefault="True"/>
+        <Button Content="{Binding DefaultButtonText}" Grid.Row="5" Style="{StaticResource MenuButton}" Command="{Binding Enter}" IsDefault="True"/>
 
         <Canvas Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" Height="90" Width="450">
             <Label Style="{StaticResource InfoLabel}" Content="New user" Margin="120, 5"/>
-            <CheckBox IsChecked="True">
+            <CheckBox IsChecked="{Binding IsNewUser}">
                 <CheckBox.LayoutTransform>
                     <ScaleTransform ScaleX="6" ScaleY="6" />
                 </CheckBox.LayoutTransform>
@@ -75,6 +75,9 @@
 
         <Label Style="{StaticResource InfoLabel}" Content="{Binding ErrorText}" FontSize="30" VerticalAlignment="Top" Grid.Row="6" Grid.ColumnSpan="2" Foreground="#E32F2F"/>
 
+        <Image Grid.Row="9" Grid.Column="9" Style="{StaticResource CornerLogo}"/>
+
+        <Control Style="{StaticResource LoadingIndicator}" Visibility="{Binding IsLoading}" Grid.RowSpan="9" Grid.ColumnSpan="9"/>
         <!-- UI Elements -->
 
         <Grid.RowDefinitions>
