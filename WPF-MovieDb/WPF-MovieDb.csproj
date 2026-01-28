@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="artisoLogo.png" />
     <None Remove="Resources\bin.png" />
     <None Remove="Resources\deselectedBoxes.png" />
     <None Remove="Resources\diskette.png" />
@@ -39,7 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\artisoLogo.png" />
     <Resource Include="Resources\bin.png" />
     <Resource Include="Resources\diskette.png" />
     <Resource Include="Resources\editing.png" />

@@ -107,7 +107,6 @@
 
         <!-- Artiso logo -->
         <Style x:Key="CornerLogo" TargetType="Image">
-            <Setter Property="Source" Value="/Resources/artisoLogo.png"/>
             <Setter Property="Stretch" Value="Fill"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Bottom"/>
