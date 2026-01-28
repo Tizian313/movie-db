@@ -15,24 +15,24 @@ public class StringsToMovieElementsTest
     {
         List<Person> allPersons = new()
         {
-            new() {FirstName = "Mattis", LastName = "Luncz"},
-            new() {FirstName = "Tizian", LastName = "Wittstadt"},
-            new() {FirstName = "Cristian", LastName = "Carcassco"}
+            new() {FirstName = "Mattis", LastName = "lm0"},
+            new() {FirstName = "Tizian", LastName = "lm1"},
+            new() {FirstName = "Cristian", LastName = "lm2"}
         };
 
         Mock<IPersonAPIService> personRepoMock = new();
-        personRepoMock.Setup(x => x.Get("mattis luncz")).Returns(allPersons[0]);
-        personRepoMock.Setup(x => x.Get("tizian wittstadt")).Returns(allPersons[1]);
-        personRepoMock.Setup(x => x.Get("cristian carcassco")).Returns(allPersons[2]);
+        personRepoMock.Setup(x => x.Get("mattis lm0")).Returns(allPersons[0]);
+        personRepoMock.Setup(x => x.Get("tizian lm1")).Returns(allPersons[1]);
+        personRepoMock.Setup(x => x.Get("cristian lm2")).Returns(allPersons[2]);
 
         var stme = new StringsToMovieElements(personRepoMock.Object);
 
-        var result = stme.GetPersons("Mattis Luncz").personList;
+        var result = stme.GetPersons("Mattis lm0").personList;
 
 
         List<Person> expectedResult = new()
         {
-            new() {FirstName = "Mattis", LastName = "Luncz"}
+            new() {FirstName = "Mattis", LastName = "lm0"}
         };
 
         result.Should().BeEquivalentTo(expectedResult);
@@ -43,23 +43,23 @@ public class StringsToMovieElementsTest
     {
         List<Person> allPersons = new()
         {
-            new() {FirstName = "Mattis", LastName = "Luncz"},
-            new() {FirstName = "Tizian", LastName = "Wittstadt"},
-            new() {FirstName = "Cristian", LastName = "Carcassco"}
+            new() {FirstName = "Mattis", LastName = "lm0"},
+            new() {FirstName = "Tizian", LastName = "lm1"},
+            new() {FirstName = "Cristian", LastName = "lm2"}
         };
 
         Mock<IPersonAPIService> personRepoMock = new();
-        personRepoMock.Setup(x => x.Get("mattis luncz")).Returns(allPersons[0]);
-        personRepoMock.Setup(x => x.Get("tizian wittstadt")).Returns(allPersons[1]);
-        personRepoMock.Setup(x => x.Get("cristian carcassco")).Returns(allPersons[2]);
+        personRepoMock.Setup(x => x.Get("mattis lm0")).Returns(allPersons[0]);
+        personRepoMock.Setup(x => x.Get("tizian lm1")).Returns(allPersons[1]);
+        personRepoMock.Setup(x => x.Get("cristian lm2")).Returns(allPersons[2]);
 
         var stme = new StringsToMovieElements(personRepoMock.Object);
-        var result = stme.GetPersons("Mattis Luncz,tizian Wittstadt").personList;
+        var result = stme.GetPersons("Mattis lm0,tizian lm1").personList;
 
         List<Person> expectedResult = new()
         {
-            new() {FirstName = "Mattis", LastName = "Luncz"},
-            new() {FirstName = "Tizian", LastName = "Wittstadt"}
+            new() {FirstName = "Mattis", LastName = "lm0"},
+            new() {FirstName = "Tizian", LastName = "lm1"}
         };
 
         result.Should().BeEquivalentTo(expectedResult);
@@ -70,23 +70,23 @@ public class StringsToMovieElementsTest
     {
         var allPersons = new List<Person>()
         {
-            new() {FirstName = "Mattis", LastName = "Luncz"},
-            new() {FirstName = "Tizian", LastName = "Wittstadt"},
-            new() {FirstName = "Cristian", LastName = "Carcassco"}
+            new() {FirstName = "Mattis", LastName = "lm0"},
+            new() {FirstName = "Tizian", LastName = "lm1"},
+            new() {FirstName = "Cristian", LastName = "lm2"}
         };
 
         Mock<IPersonAPIService> personRepoMock = new();
-        personRepoMock.Setup(x => x.Get("mattis luncz")).Returns(allPersons[0]);
-        personRepoMock.Setup(x => x.Get("tizian wittstadt")).Returns(allPersons[1]);
-        personRepoMock.Setup(x => x.Get("cristian carcassco")).Returns(allPersons[2]);
+        personRepoMock.Setup(x => x.Get("mattis lm0")).Returns(allPersons[0]);
+        personRepoMock.Setup(x => x.Get("tizian lm1")).Returns(allPersons[1]);
+        personRepoMock.Setup(x => x.Get("cristian lm2")).Returns(allPersons[2]);
 
         var stme = new StringsToMovieElements(personRepoMock.Object);
-        var result = stme.GetPersons("Tizian Wittstadt, Mattis Benjamin Luncz");
+        var result = stme.GetPersons("Tizian lm1, Mattis Benjamin lm0");
 
 
         List<Person> expectedPersonListResult = new()
         {
-            new() {FirstName = "Mattis Benjamin", LastName = "Luncz", DateOfBirth = DateTime.Parse("01/01/1900")},
+            new() {FirstName = "Mattis Benjamin", LastName = "lm0", DateOfBirth = DateTime.Parse("01/01/1900")},
         };
 
         result.personList.Should().BeEquivalentTo(expectedPersonListResult);
