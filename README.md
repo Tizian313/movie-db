@@ -14,35 +14,73 @@ authorization.
 > **Note:**  
 > As this project was developed at the start of my apprenticeship, some parts may not follow best practices or reflect my current development style.
 
+---
 
-## Core Projects
+## Database
 
-- **Database**  
-  Database project containing schema and data-related configuration.
+Database project containing schema and data-related configuration.
 
-- **MovieDB.REST-API**  
-  RESTful API providing access to movie data and business logic.
+### Technologies & Tools
+- Entity Framework Core
+- Microsoft SQL Server (MSSQL)
 
-- **MovieDB.SharedModels**  
-  Shared data models used across the API and frontend applications.
+### Skills & Concepts
+- SQL
+- Migrations
 
+---
 
-## Frontend Clients
+## MovieDB.REST-API
 
-- **WPF-MovieDb**  
-  Desktop frontend built with WPF for interacting with the API.
+RESTful API providing access to movie data and business logic.
 
-- **YourMovieDB**  
-  Command-line interface (CLI) frontend for accessing movie data.
+### Technologies & Tools
+- ASP.NET Core
+- Entity Framework Core
+- RESTful HTTP endpoints
 
+### Skills & Concepts
+- REST API design
+- Authentication and authorization with JSON Web Tokens (JWT)
+
+---
+
+## WPF-MovieDb
+
+Desktop frontend built with WPF for interacting with the API.
+
+### Technologies & Tools
+- Windows Presentation Foundation (WPF)
+
+### Skills & Concepts
+- Model-View-ViewModel design pattern (MVVM)
+- Desktop UI design
+- API consumption
+
+---
+
+## YourMovieDB  
+
+Command-line interface (CLI) frontend for accessing movie data.
+
+### Technologies & Tools
+- .NET Framework
+
+### Skills & Concepts
+- Simple CLI design
+- API consumption
+
+---
 
 ## Test Projects
 
-- **MovieDB.REST-API.Test**  
-  Tests for the REST API.
+Test projects for validating the functionality of the application components.
 
-- **WPF-MovieDb.Test**  
-  Tests for the WPF frontend.
+### Technologies & Tools
+- FluentAssertions
+- Moq
+- Microsoft Test Tools (MSTest)
 
-- **YourMovieDB.Test**  
-  Tests for the CLI frontend.
+### Skills & Concepts
+- Mocking dependencies
+- Unit testing
