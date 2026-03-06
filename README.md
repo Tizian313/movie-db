@@ -34,7 +34,7 @@ Database project containing schema and data-related configuration.
 
 RESTful API providing access to movie data and business logic.
 
-![Swagger UI](docs\images\api\swagger.png)
+![Swagger UI](docs/images/api/swagger.png)
 
 ### Technologies & Tools
 - Swagger
@@ -52,9 +52,9 @@ RESTful API providing access to movie data and business logic.
 
 Desktop frontend built with WPF for interacting with the API.
 
-![WPF start page](docs\images\wpf\start_page.png)
-![Movie search interface](docs\images\wpf\movie_search.png)
-![Movie data editor](docs\images\wpf\movie_editor.png)
+![WPF start page](docs/images/wpf/start_page.png)
+![Movie search interface](docs/images/wpf/movie_search.png)
+![Movie data editor](docs/images/wpf/movie_editor.png)
 
 ### Technologies & Tools
 - Windows Presentation Foundation (WPF)
@@ -70,7 +70,7 @@ Desktop frontend built with WPF for interacting with the API.
 
 Command-line interface (CLI) frontend for accessing movie data.
 
-![CLI start page](docs\images\cli\start_page.png)
+![CLI start page](docs/images/cli/start_page.png)
 
 ### Technologies & Tools
 - .NET Framework
